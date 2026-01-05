@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Create Course";
+}
+
+<div class="container mt-4">
+    <h2>Create Course</h2>
+    <form id="createCourseForm">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a href="/Courses" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/courses.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuth();
+            setupCreateForm();
+        });
+    </script>
+}

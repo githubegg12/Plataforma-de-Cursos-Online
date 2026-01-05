@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Edit Course";
+}
+
+<div class="container mt-4">
+    <h2>Edit Course Title</h2>
+    <form id="editCourseForm">
+        <input type="hidden" id="courseId">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" required>
+        </div>
+        <!-- Status is not editable here -->
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a href="/Courses" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/courses.js" asp-append-version="true"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Edit page loaded');
+            checkAuth();
+            if (typeof setupEditForm === 'function') {
+                console.log('Calling setupEditForm');
+                setupEditForm();
+            } else {
+                console.error('setupEditForm is not defined');
+            }
+        });
+    </script>
+}
