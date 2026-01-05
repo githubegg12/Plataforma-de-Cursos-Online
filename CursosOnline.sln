@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursosOnline.Web", "CursosOnline.Web\CursosOnline.Web.csproj", "{02038361-4736-4DDA-ABBE-4A5FA4D40989}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursosOnline.Domain", "CursosOnline.Domain\CursosOnline.Domain.csproj", "{262382A2-85D6-4EC0-8369-1E839315CFF4}"
@@ -9,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursosOnline.Infrastructure", "CursosOnline.Infrastructure\CursosOnline.Infrastructure.csproj", "{FEDBF489-82C5-460F-814C-C86393F51375}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursosOnline.Identity", "CursosOnline.Identity\CursosOnline.Identity.csproj", "{3CDDF88F-124C-47B4-9B0C-84FBBAD8304F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursosInline.API", "CursosInline.API\CursosInline.API.csproj", "{57D401C2-F33F-4397-AC91-9B577C47D2B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursosOnline.Tests", "CursosOnline.Tests\CursosOnline.Tests.csproj", "{B839F3C3-2256-4E40-9462-8D52DB37178E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +41,13 @@ Global
 		{3CDDF88F-124C-47B4-9B0C-84FBBAD8304F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CDDF88F-124C-47B4-9B0C-84FBBAD8304F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CDDF88F-124C-47B4-9B0C-84FBBAD8304F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D401C2-F33F-4397-AC91-9B577C47D2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D401C2-F33F-4397-AC91-9B577C47D2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D401C2-F33F-4397-AC91-9B577C47D2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D401C2-F33F-4397-AC91-9B577C47D2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B839F3C3-2256-4E40-9462-8D52DB37178E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B839F3C3-2256-4E40-9462-8D52DB37178E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B839F3C3-2256-4E40-9462-8D52DB37178E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B839F3C3-2256-4E40-9462-8D52DB37178E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
