@@ -26,13 +26,28 @@ These settings are configured in `docker-compose.yml`.
 
 ### 2. Running the Application
 
-You can run the entire application (API/Frontend + Database) using Docker Compose.
+You can run the application using either Docker Compose (Recommended) or manually.
+
+#### Option 1: Docker Compose (Recommended)
 
 1. Open a terminal in the root directory of the project.
 2. Run the following command:
 
    ```bash
    docker compose up --build
+   ```
+
+3. The application will be accessible at [http://localhost:5055](http://localhost:5055).
+
+#### Option 2: Manual Run (Development)
+
+If you prefer to run the application without Docker:
+
+1. Ensure PostgreSQL is running and the connection string in `appsettings.json` is correct.
+2. Run the Web project (which hosts both the API and Frontend):
+
+   ```bash
+   dotnet run --project CursosOnline.Web
    ```
 
 3. The application will be accessible at [http://localhost:5055](http://localhost:5055).
@@ -61,11 +76,14 @@ Use these credentials to log in at [http://localhost:5055/Auth/Login](http://loc
 
 ## Project Structure
 
-- **CursosOnline.Web**: The ASP.NET Core MVC application (Frontend & API).
-- **CursosOnline.Application**: Business logic and services.
-- **CursosOnline.Domain**: Entities and interfaces.
-- **CursosOnline.Infrastructure**: Data access and repositories.
-- **CursosOnline.Identity**: Identity and authentication logic.
+This project follows a **Monolithic Architecture** where the `CursosOnline.Web` project serves both the MVC Frontend and the REST API.
+
+- **CursosOnline.Web**: The Main Entry Point. Contains Controllers (API & MVC), Views (Razor), and Static Files.
+- **CursosOnline.Application**: Business logic, Services, and DTOs.
+- **CursosOnline.Domain**: Entities and Core Interfaces.
+- **CursosOnline.Infrastructure**: Database Context (EF Core), Repositories, and Migrations.
+- **CursosOnline.Identity**: Identity configuration and User models.
+- **CursosInline.API**: *Unused/Template project*.
 
 ## Deployment (Clever Cloud)
 
